@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Brick\Math\BigInteger;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -11,7 +10,7 @@ class FibonacciController extends Controller
 {
  /**
     * 対象のフィボナッチ数列を求める
-    *
+    *@param Request $request
     * @return JsonResponse
     */
     public function researchFibonacci(Request $request): JsonResponse
@@ -36,7 +35,7 @@ class FibonacciController extends Controller
             return response()->json(['result' => $fibonacci[$requestNumber]]);
         }
         else {
-            return response()->json(['message' => 'Bad request'], 400);
+            return response()->json(['status' => 400,'message' => 'Bad request'], 400);
         }
     }
 }
