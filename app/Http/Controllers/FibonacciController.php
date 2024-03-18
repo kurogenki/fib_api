@@ -21,9 +21,9 @@ class FibonacciController extends Controller
         // 数値に変換できる値（数値、数値文字列）かつ、数値が0以上の場合
         if (is_numeric($request['n']) && $requestNumber > -1) {
             $i = 2;
+            $fibonacci[0] = 0;
+            $fibonacci[1] = 1;
             while (true) {
-                $fibonacci[0] = 0;
-                $fibonacci[1] = 1;
                 $temp = BigInteger::of($fibonacci[$i - 2])->plus($fibonacci[$i - 1]);
                 if ($i > $requestNumber) {
                     break;
