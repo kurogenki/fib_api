@@ -1,5 +1,6 @@
 # fib_api
 処理面
+
 「本番環境のURL/fib」でアクセスすると、nという値から求めたフィボナッチ数列を返すresearchFibonacciというメソッドにアクセスします。
 
 researchFibonacciメソッドの中では、まず$requestnumberにリクエストのnという数値を代入します。
@@ -12,6 +13,7 @@ researchFibonacciメソッドの中では、まず$requestnumberにリクエス�
 
 
 テスト面
+
 テストコードはtests/Feature/FibonacciTest.phpというファイルに記述してあります。
 今回はapiを踏んで実際のリクエストを通して処理が正しく処理されているか確認するテストを記述しました。
 現在テストはどれも正しく通るものになっています。
